@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SMPT - Monitor</title>
+  <link rel="stylesheet" href="assets/styles/styles.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+  <!-- dibujar la cuadricula -->
+  <div class="bg-grid-overlay"></div>
+
+  <!-- encabezado fuera-->
+  <div class="login-wrapper">
+    <header class="login-header">
+      <h1>SMPT Monitor</h1>
+      <p>Acceso Seguro a la Plataforma</p>
+    </header>
+
+    <!-- contenedor de login-->
+    <main class="login-card">
+      <div class="login-wrapper">
+        <img src="assets/images/INDE-LOGO.png" alt="Logo" class="logo-img">
+      </div>
+
+      <form class="login-form" id="loginForm" novalidate>
+        <!-- campo del usuario -->
+        <div class="form-group">
+          <label for="username">Usuario</label>
+          <div class="input-container">
+            <input type="text" id="username" name="username" placeholder="Usuario o Correo" required
+              autocomplete="off" />
+          </div>
+          <span class="error-message">El usuario es requerido</span>
+        </div>
+
+        <!-- campo de la contrasenia -->
+        <div class="form-group">
+          <div class="label-row">
+            <label for="password">Contraseña</label>
+            <a href="#" class="forgot-link">Olvidaste tu contraseña?</a>
+          </div>
+
+          <div class="input-container password-container">
+            <input type="password" id="password" name="password" placeholder="••••••••••••" required
+              autocomplete="current-password" />
+            <button type="button" class="toggle-password" id="togglePassword">
+
+              <svg id="eyeIcon" viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2"
+                fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path id="eyePath" d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                <circle id="eyeCircle" cx="12" cy="12" r="3"></circle>
+                <line id="eyeSlash" x1="3" y1="3" x2="21" y2="21" style="display: none;"></line>
+              </svg>
+
+            </button>
+          </div>
+          <span class="error-message">La contraseña es requerida</span>
+        </div>
+
+        <div id="msg"></div>
+
+        <!-- boton de login -->
+        <button type="submit" class="btn-submit">
+          <span>Iniciar Sesión</span>
+          <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2.5" fill="none"
+            stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </button>
+      </form>
+    </main>
+
+    <footer class="card-footer">
+      <p>&copy; SMPT - Monitor. Todos los derechos reservados</p>
+    </footer>
+  </div>
+
+  <script src="assets/scripts/script.js"></script>
+</body>
+
+</html>
